@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-        <div class="title">MyAppA</div>
+        <div class="title">MyApp</div>
         <ul class="menu">
             <li><a href="index.html" class="active">Главная</a></li>
             <li><a href="catalog.php">Каталог</a></li>
