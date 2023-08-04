@@ -69,7 +69,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
+    public function actionSingIn()
     {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -81,7 +81,18 @@ class SiteController extends Controller
         }
 
         $model->password = '';
-        return $this->render('login', [
+        return $this->render('singin', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionSingUp()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        return $this->render('singup', [
             'model' => $model,
         ]);
     }
